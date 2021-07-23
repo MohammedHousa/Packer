@@ -30,3 +30,18 @@ packer validate .
 
 # Build the image
 packer build ubuntu.pkr.hcl
+
+
+# Download and install Terraform
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
+
+# Check if Terraform is installed
+terraform version
+
+# Make a directory
+mkdir terraform-project
+
+# Create Terraform file
+vim main.tf
